@@ -1,0 +1,114 @@
+/* Container widths for different screen sizes */
+@media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+      padding: 0;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+  
+  /* Flexbox layout for responsive rows */
+  .rows {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  @media (min-width: 992px) {
+    .rows {
+      flex-direction: row;
+    }
+  }
+  
+  /* Full width for both image and text on smaller screens */
+  .col-lg-6 {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  /* Flex 50% on larger screens */
+  @media (min-width: 992px) {
+    .col-lg-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Padding adjustments for better spacing */
+  .about-area {
+    padding: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .about-area {
+      /* padding: 40px; */
+    }
+  }
+  
+  /* Thumbnail box with margin */
+  .thumb-box {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  /* Image styling */
+  .responsive-image {
+    width: 100%;  /* Full width in flex-column */
+    height: auto;
+    max-width: 100%;  /* Ensure it doesn't exceed container */
+    max-height: 350px; /* Restricting image height */
+  }
+  
+  /* Info section padding */
+  .about-area .info {
+    padding: 15px;
+  }
+  
+  @media (min-width: 992px) {
+    .about-area .info {
+      padding-left: 35px;
+    }
+  }
+  
+  /* Headings styling */
+  h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    h5 {
+      font-size: 1.75rem;
+    }
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  @media (min-width: 768px) {
+    p {
+      font-size: 1.125rem;
+    }
+  }
+  

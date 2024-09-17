@@ -1,0 +1,39 @@
+.sliding-text-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .static-text {
+    white-space: nowrap;
+    font-family: 'Poppins', sans-serif; /* Optional: Custom font */
+    font-size: 1.25rem; /* Adjust font size as needed */
+  }
+  
+  .sliding-text-wrapper {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .sliding-text {
+    white-space: nowrap;
+    display: inline-block;
+    animation: slideLeft 40s linear infinite;
+    font-family: 'Poppins', sans-serif; /* Optional: Custom font */
+    font-size: 1.25rem; /* Adjust font size as needed */
+    color: #fff; /* Optional: Text color */
+    position: absolute;
+    top: 1px;
+  }
+  
+  @keyframes slideLeft {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  

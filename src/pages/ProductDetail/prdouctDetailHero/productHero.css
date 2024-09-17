@@ -1,0 +1,12 @@
+.__shop-banner-main {
+    position: relative;
+    overflow: hidden; /* Ensures no overflow of the image */
+  }
+  
+  .__shop-page-banner {
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    object-fit: fill; /* Cover the container and maintain aspect ratio */
+    display: block; /* Remove any default inline spacing */
+  }
+  

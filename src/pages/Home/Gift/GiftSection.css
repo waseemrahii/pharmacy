@@ -1,0 +1,81 @@
+/* Container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card styling */
+.category {
+  position: relative;
+  border-radius: 0.75rem; /* rounded-lg */
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transform: scale(1);
+  transition: transform 0.3s;
+  
+}
+
+/* Hover effect */
+.group:hover .card-inner {
+  transform: scale(1.1);
+}
+
+.group .card-inner {
+  transition: transform 0.3s;
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 0.75rem; /* rounded-lg */
+}
+
+.group:hover .card-overlay {
+  opacity: 1;
+}
+
+/* Button styling */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.375rem; /* rounded */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Custom animation for button */
+@keyframes bounce-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-bounce-horizontal {
+  animation: bounce-horizontal 1s infinite;
+}
+
+/* Heading styling */
+.heading {
+  font-family: 'Roboto Slab', serif; /* Apply the stylish font */
+  font-size: 2.5rem; /* Adjust size as needed */
+  font-weight: 700; /* Bold */
+  color: #333; /* Dark gray for better readability */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  text-align: center; /* Center-align the text */
+  margin-bottom: 2rem; /* Margin for spacing */
+}
