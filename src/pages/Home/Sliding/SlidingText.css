@@ -1,39 +1,35 @@
 .sliding-text-container {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    width: 100%;
+  width: 100%;
+  padding: 0.5rem 0; /* Reduced padding for better appearance on small screens */
+}
+
+.static-text {
+  white-space: nowrap;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.sliding-text-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem; /* Reduced padding for better spacing on small screens */
+}
+
+.sliding-text {
+  white-space: nowrap;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  animation: slideLeft 20s linear infinite; /* Slightly faster animation */
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
   }
-  
-  .static-text {
-    white-space: nowrap;
-    font-family: 'Poppins', sans-serif; /* Optional: Custom font */
-    font-size: 1.25rem; /* Adjust font size as needed */
+  to {
+    transform: translateX(-100%);
   }
-  
-  .sliding-text-wrapper {
-    flex: 1;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .sliding-text {
-    white-space: nowrap;
-    display: inline-block;
-    animation: slideLeft 40s linear infinite;
-    font-family: 'Poppins', sans-serif; /* Optional: Custom font */
-    font-size: 1.25rem; /* Adjust font size as needed */
-    color: #fff; /* Optional: Text color */
-    position: absolute;
-    top: 1px;
-  }
-  
-  @keyframes slideLeft {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
-  
+}

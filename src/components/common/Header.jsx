@@ -671,12 +671,13 @@ function Header() {
 
         {/* Mobile Icons */}
         <div className="md:hidden flex items-center space-x-4">
+        <Link to="/cart" className="relative group hover:text-yellow-300 transition duration-300 flex items-center">
+            <FaShoppingCart className="text-2xl" />
+          </Link>
           <button onClick={toggleMenu} className="text-white">
             {isMenuOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
           </button>
-          <Link to="/cart" className="relative group hover:text-yellow-300 transition duration-300 flex items-center">
-            <FaShoppingCart className="text-2xl" />
-          </Link>
+         
         </div>
       </nav>
 

@@ -3,24 +3,24 @@ import './FooterSlider.css'
 const sliderData = [
   {
     id: "style-ZDSA5",
-    link: "https://6valley.6amtech.com/about-us",
-    imgSrc: "https://6valley.6amtech.com/public/assets/front-end/png/about-company.png",
+    link: "/about-us",
+    imgSrc: "/about-company.png",
     imgAlt: "About Us",
     title: "About Us",
     description: "Know about our company more.",
   },
   {
     id: "style-8FEOy",
-    link: "https://6valley.6amtech.com/contacts",
-    imgSrc: "https://6valley.6amtech.com/public/assets/front-end/png/contact-us.png",
+    link: "/contact",
+    imgSrc: "/contact-us.png",
     imgAlt: "Contact Us",
     title: "Contact Us",
     description: "We are Here to Help",
   },
   {
     id: "style-m9Ub9",
-    link: "https://6valley.6amtech.com/helpTopic",
-    imgSrc: "https://6valley.6amtech.com/public/assets/front-end/png/faq.png",
+    link: "/about",
+    imgSrc: "/faq.png",
     imgAlt: "FAQ",
     title: "Buy Voucher",
     description: "Get all Answers",
@@ -34,7 +34,7 @@ const FooterSlider = () => {
         <div className="container">
           <div className="footer-slider owl-theme owl-carousel owl-loaded owl-drag">
             <div className="owl-stage-outer owl-height style-oIxbk" id="style-oIxbk">
-              <div className="owl-stage style-NbxH9" id="style-NbxH9">
+              <div className="owl-stage " >
                 {sliderData.map((item) => (
                   <div key={item.id} className="owl-item active" id={item.id}>
                     <div className="footer-slide-item">
