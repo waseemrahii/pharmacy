@@ -365,9 +365,25 @@ const Pharmacy = () => {
   return (
     <section className="contact-us-form pt-10 mb-10 container" style={{ marginTop: "4rem" }}>
       <div className="container p-10 sm:p-0">
-        <div className="row justify-content-lg-between container align-items-center flex flex-column-reverse md:flex-row">
+        <div className="row justify-content-lg-between container  flex flex-column-reverse md:flex-row">
+         
+          <div className="col-lg-5 col-md-10 text- mt-5">
+            <h1 className='font-bold mb-3' style={{ fontSize: "2rem", fontFamily: "Poppins" }}>
+              Consult a Professional
+            </h1>
+            <p>
+              How often is it that you sometimes need advice, reassurance and information about a condition? Visiting a hospital or GP or making an appointment is often not practical or too time-consuming.
+              You can conveniently get access to professional advice and ask questions from home. Try our services and benefit from highly skilled professionals who can provide guidance and support.
+            </p>
+            <Link to='https://www.medicineshoppe.ca/'>
+              <button className='bg-red-600 text-white btn mt-3 w-full'>
+                Link To Prescriptions
+              </button>
+            </Link>
+          </div>
+
           <div className="col-lg-6 col-md-8 mt-5">
-            <form className="register-form container" onSubmit={handleSubmit}>
+            <form className="register-form" onSubmit={handleSubmit}>
               <div className="row">
                 <div className="col-12 mb-3">
                   <label htmlFor="firstName" className="mb-1">First name <span className="text-danger">*</span></label>
@@ -433,20 +449,6 @@ const Pharmacy = () => {
                 </div>
               </div>
             </form>
-          </div>
-          <div className="col-lg-5 col-md-10 text-center mt-5">
-            <h1 className='font-bold mb-3' style={{ fontSize: "2rem", fontFamily: "Poppins" }}>
-              Consult a Professional
-            </h1>
-            <p>
-              How often is it that you sometimes need advice, reassurance and information about a condition? Visiting a hospital or GP or making an appointment is often not practical or too time-consuming.
-              You can conveniently get access to professional advice and ask questions from home. Try our services and benefit from highly skilled professionals who can provide guidance and support.
-            </p>
-            <Link to='https://www.medicineshoppe.ca/'>
-              <button className='bg-red-600 text-white btn mt-3 w-full'>
-                Link To Prescriptions
-              </button>
-            </Link>
           </div>
         </div>
       </div>
