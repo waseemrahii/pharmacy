@@ -1,4 +1,5 @@
-.Default_marketing-default-hero__Ew4q_ {
+
+ .Default_marketing-default-hero__Ew4q_ {
   background: radial-gradient(22.4% 45.45% at 55.91% 89.19%, rgba(119, 56, 237, .3) 0, rgba(119, 56, 237, 0) 100%), linear-gradient(98.39deg, #48cb9d 0, #5f91ed 96.14%) !important;
   height: auto; /* Change to auto on small screens */
   display: flex;
@@ -46,6 +47,12 @@
   gap: var(--brand-spacing_8,2rem);
 }
 
+/* Styles for screens smaller than 768px */
+@media screen and (max-width: 767px) {
+  .Default_marketing-default-hero__inner__fqA9B {
+    margin-top: 44%; /* Apply 44% margin-top for small screens */
+  }
+}
 @media screen and (min-width: 1024px) {
   .Default_marketing-default-hero__inner__fqA9B {
     grid-gap: var(--brand-spacing_10,2.5rem);
@@ -226,6 +233,7 @@ p {
   transition: .5s;
   white-space: nowrap;
 }
+
 
 .dist_marketing-btn-light__QOvFK {
   background-color: var(--marketing-forest-green-800,#006a43);

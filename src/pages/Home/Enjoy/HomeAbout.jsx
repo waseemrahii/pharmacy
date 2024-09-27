@@ -64,7 +64,7 @@ function EnjoyAbout() {
 
   return (
     <div className="bg-gray relative px-0 md:px-6 lg:px-12  py-6 md:py-12 lg:py-20 xl:py-24">
-      <div className="container mx-auto flex flex-col lg:flex-row-reverse items-center justify-center gap-6 lg:gap-12">
+      <div className="container mx-auto flex flex-col lg:flex-row-reverse  items-center justify-center gap-6 lg:gap-12">
         <div className="w-full lg:w-1/2" data-aos="fade-right" data-aos-duration="1000">
           <div className="relative mb-6 lg:mb-12">
             <img

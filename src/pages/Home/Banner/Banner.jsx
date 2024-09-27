@@ -21,9 +21,7 @@ function Banner() {
                 <p className="wow fadeInLeft text-white sm:p-0 " id="style-lDMPo">
                   Select a gift for your loved one that will bolster them during their illness. Choose from a huge selection of carefully selected gifts designed to suit the patient’s needs and encourage recovery to health.
                 </p>
-                <a href="" className="theme video-play-button relative video-inline">
-                  <FaArrowRight className="ml-2 animate-bounce-horizontal" />
-                </a>
+               
               </div>
               <div className="col-lg-6 thumb">
                 <img src="/doctor.png" alt="Thumb" />
