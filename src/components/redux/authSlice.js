@@ -1,7 +1,9 @@
+
 // // src/redux/authSlice.js
+
 // import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 // import axios from 'axios';
-
+// import BaseUrl from "../../BaseUrl"
 // const token = localStorage.getItem('token');
 // const userData = localStorage.getItem('user');
 
@@ -9,16 +11,15 @@
 //   isLoggedIn: !!token,
 //   user: userData ? JSON.parse(userData) : null,
 //   error: null,
-//   token: token || null, // Add token to state
+//   token: token || null,
 // };
 
-// // Login async thunk
 // export const login = createAsyncThunk(
 //   'auth/login',
 //   async ({ email, password }, thunkAPI) => {
 //     try {
-//       const response = await axios.post('http://localhost:3000/api/users/login', { email, password });
-//       // Extract token and user from the API response
+//       const response = await axios.post(`${BaseUrl}/api/users/login`, 
+//         { email, password });
 //       const { token, user } = response.data.docs;
 
 //       localStorage.setItem('token', token);
@@ -40,7 +41,7 @@
 //       localStorage.removeItem('user');
 //       state.isLoggedIn = false;
 //       state.user = null;
-//       state.token = null; // Clear token from state
+//       state.token = null;
 //       state.error = null;
 //     },
 //     setAuthToken: (state, action) => {
@@ -67,11 +68,8 @@
 
 
 
-
-// src/redux/authSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
-
+import axiosInstance from './axiosInstance'; // Import the Axios instance
 const token = localStorage.getItem('token');
 const userData = localStorage.getItem('user');
 
@@ -86,7 +84,7 @@ export const login = createAsyncThunk(
   'auth/login',
   async ({ email, password }, thunkAPI) => {
     try {
-      const response = await axios.post('http://localhost:3000/api/users/login', { email, password });
+      const response = await axiosInstance.post('/api/users/login', { email, password });
       const { token, user } = response.data.docs;
 
       localStorage.setItem('token', token);

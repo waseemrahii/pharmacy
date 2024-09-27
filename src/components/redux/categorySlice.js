@@ -1,15 +1,14 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import BaseUrl from '../../BaseUrl';
 
-// API Endpoints
-const API_URL = 'http://localhost:3000/api/categories';
 
 // Fetch categories
 export const fetchCategories = createAsyncThunk(
   'productCategory/fetchCategories',
   async (searchParams, { rejectWithValue }) => {
     try {
-      const response = await axios.get(API_URL, { params: searchParams });
+      const response = await axios.get(`${BaseUrl}/categories`, { params: searchParams });
       return response.data.docs;
     } catch (error) {
       return rejectWithValue(error.response?.data || error.message);
@@ -22,7 +21,7 @@ export const fetchCategoryById = createAsyncThunk(
   'productCategory/fetchCategoryById',
   async (categoryId, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`${API_URL}/${categoryId}`);
+      const response = await axios.get(`${BaseUrl}/${categoryId}`);
       return response.data.docs;
     } catch (error) {
       return rejectWithValue(error.response?.data || error.message);
@@ -35,7 +34,7 @@ export const createCategory = createAsyncThunk(
   'productCategory/createCategory',
   async (categoryData, { rejectWithValue }) => {
     try {
-      const response = await axios.post(API_URL, categoryData);
+      const response = await axios.post(`${BaseUrl}`, categoryData);
       return response.data.docs;
     } catch (error) {
       return rejectWithValue(error.response?.data || error.message);
@@ -53,7 +52,7 @@ export const updateCategory = createAsyncThunk(
         formData.append(key, categoryData[key]);
       }
 
-      const response = await axios.put(`${API_URL}/${categoryId}`, formData, {
+      const response = await axios.put(`${BaseUrl}/${categoryId}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -70,7 +69,7 @@ export const updateCategoryStatus = createAsyncThunk(
   'productCategory/updateCategoryStatus',
   async ({ categoryId, status }, { rejectWithValue }) => {
     try {
-      const response = await axios.put(`${API_URL}/${categoryId}/status`, { status });
+      const response = await axios.put(`${BaseUrl}/${categoryId}/status`, { status });
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data || error.message);
@@ -83,7 +82,7 @@ export const deleteCategory = createAsyncThunk(
   'productCategory/deleteCategory',
   async (categoryId, { rejectWithValue }) => {
     try {
-      await axios.delete(`${API_URL}/${categoryId}`);
+      await axios.delete(`${BaseUrl}/${categoryId}`);
       return categoryId;
     } catch (error) {
       return rejectWithValue(error.response?.data || error.message);

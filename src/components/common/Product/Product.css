@@ -1669,3 +1669,57 @@
      display: block;  
   }  
   
+
+  /* Product.css */
+
+/* Ensure the sidebar does not overflow on small screens */
+@media (max-width: 768px) {
+    .SearchParameters {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .cz-sidebar {
+      padding: 10px;
+    }
+  
+    .__cate-side-price input {
+      width: 45%; /* Adjust input size for small screens */
+    }
+  
+    .__cate-side-price p {
+      width: 10%;
+    }
+  
+    .__cate-side-price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  
+  /* Ensure product cards take full width on smaller screens */
+  @media (max-width: 768px) {
+    .product-single-hover {
+      width: 100%;
+    }
+  
+    #ajax-products .col-lg-3,
+    #ajax-products .col-md-4,
+    #ajax-products .col-sm-4,
+    #ajax-products .col-6 {
+      width: 100%;
+    }
+  }
+  
+  /* Minor tweaks for better spacing */
+  .product-single-hover {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .single-product-details {
+    padding: 10px;
+  }
+  
+  

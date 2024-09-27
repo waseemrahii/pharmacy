@@ -13,13 +13,14 @@ import Cart from './components/Cart/Cart.jsx';
 import Checkout from './components/Cart/Checkout.jsx';
 import SuccessPage from './components/Cart/Success.jsx';
 import LoginPage from './components/LoginPage/LoginPage.jsx';
+import VendorProduct from './components/common/Product/VendorProduct.jsx';
 
 function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/gifts" element={<GiftPage />} />
-      <Route path="/login" element={<LoginPage />} />
+      <Route path="/products" element={<VendorProduct />} />      <Route path="/login" element={<LoginPage />} />
       <Route path="/pharmacy" element={<Pharmacy />} />
       <Route path="/about" element={<About />} />
       <Route path="/partners" element={<VendorList />} />
