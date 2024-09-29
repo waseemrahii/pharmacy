@@ -20,7 +20,8 @@ function AppRoutes() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/gifts" element={<GiftPage />} />
-      <Route path="/products" element={<VendorProduct />} />      <Route path="/login" element={<LoginPage />} />
+      <Route path="/products" element={<VendorProduct />} /> 
+         <Route path="/login" element={<LoginPage />} />
       <Route path="/pharmacy" element={<Pharmacy />} />
       <Route path="/about" element={<About />} />
       <Route path="/partners" element={<VendorList />} />
