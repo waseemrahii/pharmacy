@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { Elements, useStripe, useElements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import axios from 'axios';
+import BaseUrl from '../../BaseUrl';
 
 // Load Stripe outside of a component to avoid reinitialization issues
 const stripePromise = loadStripe('pk_test_51Pwpi4023TaI0bKzKegArlRgkp5z30jCWWTwgG0G5sN9P7ICopqAZAoK1LRAG8k6efrBsnmASu0TY9zA1FEdkKOr00IG6Jz5sF');
@@ -99,7 +100,7 @@ const CheckoutForm = () => {
       // Log the products data to ensure it’s correctly structured
       console.log("Products Data for checkout:", productsData);
   
-      const { data } = await axios.post('http://localhost:3000/api/orders', {
+      const { data } = await axios.post(`${BaseUrl}/api/orders`, {
         userId: '66e148f7523bc180670612ec',
         products: productsData,
         totalPrice,

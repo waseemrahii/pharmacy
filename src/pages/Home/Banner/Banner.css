@@ -1,6 +1,4 @@
 
-  /* set-------- */
-   
   .bg-gray {
     background-color: #f7f7f7;
   }
@@ -114,8 +112,7 @@
     padding: 150px 0;
   }
   
-  .banner-area.auto-height.fixed-thumb .thumb {}
-  
+ 
   h2 {
     margin-top: 0;
     margin-bottom: 0.5rem;
@@ -243,5 +240,17 @@
   /* Set padding-right to 0 for the paragraph */
   .banner-area p {
     padding-right: 0;
+  }
+}
+
+
+.hero-image {
+  margin-top: 6rem; /* Default padding-top for larger screens */
+}
+
+/* Small screens */
+@media only screen and (max-width: 576px) {
+  .hero-image {
+    margin-top: 0; /* Set padding-top to 0 for smaller screens */
   }
 }

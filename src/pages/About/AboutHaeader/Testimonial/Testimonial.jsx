@@ -1,40 +1,5 @@
 
 
-
-// import React from 'react';
-// import './Testimonial.css'; // Import your CSS file here
-
-// const Testimonial = () => {
-//   return (
-//     <section className="testimonial-container">
-//       <div className="testimonial-content">
-//         <section className="testimonial-wrapper">
-//           <div className="testimonial-text">
-//             <div className="testimonial-quote">
-//               "At Pharmacy, we believe that every business can create deep connections with its customers to fulfill their potential.”
-//             </div>
-//             <div className="testimonial-author">
-//               <span className="author-name">Armand Thiberge</span>
-//               <span className="author-title">Founder & CEO</span>
-//             </div>
-//           </div>
-//           <div className="testimonial-image-wrapper">
-//             <img
-//               alt="testimonial"
-//               src="/ceo.png"
-//               className="testimonial-image"
-//             />
-//           </div>
-//         </section>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Testimonial;
-
-
-
 import React, { useEffect } from 'react';
 import 'aos/dist/aos.css'; // Import AOS CSS
 import AOS from 'aos'; // Import AOS library

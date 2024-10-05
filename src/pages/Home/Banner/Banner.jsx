@@ -24,7 +24,7 @@ function Banner() {
                
               </div>
               <div className="col-lg-6 thumb">
-                <img src="/doctor.png" alt="Thumb" />
+                <img src="/doctor.png" alt="Thumb"  className='hero-image'/>
               </div>
             </div>
           </div>

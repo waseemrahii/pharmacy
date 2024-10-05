@@ -5,6 +5,7 @@ import ProductCard from './ProductCard';
 import { fetchProducts } from '../../redux/productSlice'; // Adjust path as necessary
 import { fetchCategories } from '../../redux/categorySlice'; // Adjust path as necessary
 import './Product.css';
+import ImageUrl from '../../../ImageUrl';
 
 const VendorProduct = () => {
   const dispatch = useDispatch();
@@ -91,8 +92,8 @@ const VendorProduct = () => {
                 },
                 rating: 5, 
                 discount: '', 
-                imageUrl: `http://localhost:3000/${product.thumbnail}`,
-                link: `http://localhost:3000/products/${product._id}`,
+                imageUrl: `${ImageUrl}/${product.thumbnail}`,
+                link: `${ImageUrl}/products/${product._id}`,
               }}
             />
           ))}

@@ -86,6 +86,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeFromCart, clearCart } from '../redux/cartSlice'; // Adjust the path as needed
 import { Link } from 'react-router-dom';
+import ImageUrl from '../../ImageUrl';
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -116,7 +117,7 @@ const Cart = () => {
               >
                 <div className="flex flex-col sm:flex-row items-center w-full">
                   <img
-                    src={`http://localhost:3000/${item.images[0]}`}
+                    src={`${ImageUrl}/${item.images[0]}`}
                     alt={item.name}
                     className="w-24 h-24 object-cover mb-4 sm:mb-0 sm:mr-4"
                   />

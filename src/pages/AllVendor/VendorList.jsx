@@ -1,22 +1,7 @@
-// import React from 'react'
-// import StoreList from './AllVendor'
-// import { storesData } from '../../components/common/Data/storeData';
-
-// const VendorList = () => {
-//   return (
-//     <div className='mb-15' style={{marginTop:"8%"}}>
-//        <StoreList stores={storesData} />  
-//     </div>
-//   )
-// }
-
-// export default VendorList
-
-
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import StoreList from './AllVendor';
+import BaseUrl from '../../BaseUrl';
 
 const VendorList = () => {
   const [storesData, setStoresData] = useState([]);
@@ -24,7 +9,7 @@ const VendorList = () => {
   useEffect(() => {
     const fetchVendors = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/vendors');
+        const response = await axios.get(`${BaseUrl}/vendors`);
         const vendorsData = response.data.docs;
 
         // Fetch products count for each vendor
@@ -32,7 +17,7 @@ const VendorList = () => {
           vendorsData.map(async (vendor) => {
             try {
               const productsResponse = await axios.get(
-                `http://localhost:3000/api/products/?userId=${vendor._id}`
+                `${BaseUrl}/products/?userId=${vendor._id}`
               );
               const totalProducts = productsResponse.data.docs.totalDocs;
               return { ...vendor, totalProducts };
@@ -53,10 +38,10 @@ const VendorList = () => {
   }, []);
 
   return (
-    <div className='mb-15' style={{ marginTop: "8%" }}>
+    <div className='mb-15 sm:mt-25 md:mt-12 lg:mt-7' style={{marginTop:"5rem"}}>
       <StoreList stores={storesData} />
     </div>
   );
 };
 
-export default VendorList;
+export default VendorList;//

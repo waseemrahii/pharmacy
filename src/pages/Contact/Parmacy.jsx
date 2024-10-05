@@ -48,8 +48,8 @@ const Pharmacy = () => {
   };
 
   return (
-    <section className="contact-us-form pt-10 mb-10 container" style={{ marginTop: "4rem" }}>
-      <div className="container p-10 sm:p-0">
+    <section className="contact-us-form pt-10 mb-10" style={{ marginTop: "4rem" }}>
+      <div className="container p-0 sm:p-10">
         <div className="row justify-content-lg-between container  flex flex-column-reverse md:flex-row">
          
           <div className="col-lg-5 col-md-10 text- mt-5">

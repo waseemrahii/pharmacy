@@ -75,6 +75,7 @@ import { FaArrowRight, FaEye } from 'react-icons/fa';
 import CardComponent from '../../../components/common/Card.jsx';
 
 import './GiftSection.css';
+import ImageUrl from '../../../ImageUrl.js';
 
 const CardRow = () => {
   const dispatch = useDispatch();
@@ -108,7 +109,7 @@ const CardRow = () => {
             >
               <div className="relative transition-transform duration-300 group-hover:scale-110 rounded-lg overflow-hidden">
                 <CardComponent
-                  imageSrc={`https://solorbackend-1.vercel.app/uploads/${category.logo}`} // Adjust the image path as needed
+                  imageSrc={`${ImageUrl}/uploads/${category.logo}`} // Adjust the image path as needed
                   title={category.name}
                 />
                 {/* Hover effect */}

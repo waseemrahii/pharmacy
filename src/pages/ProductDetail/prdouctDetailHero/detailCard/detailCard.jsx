@@ -245,6 +245,8 @@ import { addToCart } from '../../../../components/redux/cartSlice'; // Adjust im
 import { toast, ToastContainer } from 'react-toastify'; // Import toast and ToastContainer
 import 'react-toastify/dist/ReactToastify.css'; // Import toast CSS
 import { v4 as uuidv4 } from 'uuid'; // Add this line to import uuid
+import BaseUrl from '../../../../BaseUrl';
+import ImageUrl from '../../../../ImageUrl';
 
 const ProductDetailCard = () => {
   const { id } = useParams(); // Get product ID from URL
@@ -258,7 +260,7 @@ const ProductDetailCard = () => {
   useEffect(() => {
     const fetchProductData = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/products/${id}`);
+        const response = await fetch(`${BaseUrl}/products/${id}`);
         const data = await response.json();
         if (data.success) {
           setProduct(data.docs);
@@ -322,7 +324,7 @@ const ProductDetailCard = () => {
             <div className="carousel-item active">
               <img
                 className="w-full h-full object-cover"
-                src={`http://localhost:3000/${product.images[currentSlide]}`}
+                src={`${ImageUrl}/${product.images[currentSlide]}`}
                 alt={product.name}
               />
             </div>
@@ -357,7 +359,7 @@ const ProductDetailCard = () => {
             >
               <img
                 className="w-24 h-24 object-cover mr-2"
-                src={`http://localhost:3000/${src}`}
+                src={`${ImageUrl}/${src}`}
                 alt={`Thumbnail ${index + 1}`}
               />
             </div>

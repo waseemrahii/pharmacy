@@ -1,30 +1,4 @@
 
-
-
-// import React from 'react';
-// import { BrowserRouter as Router } from 'react-router-dom';
-// import Header from './components/common/Header.jsx';
-// import Footer from './components/common/Footer.jsx';
-// import AppRoutes from './Routes.jsx';
-// import './App.css'
-// function App() {
-//   return (
-//     <Router>
-//       <div className="flex flex-col min-h-screen">
-//         <Header />
-//         <main className="flex-grow">
-//           <AppRoutes />
-//         </main>
-//         <Footer />
-//       </div>
-//     </Router>
-//   );
-// }
-
-// export default App;
-
-
-
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/common/Header.jsx';

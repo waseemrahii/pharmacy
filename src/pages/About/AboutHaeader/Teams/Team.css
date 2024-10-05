@@ -175,19 +175,7 @@ h2 {
 
 .dist_brevo-heading__utk3d { 
     margin: 0;
-} 
-
-.marketing-typo_text-inter-3-regular { 
-    font-family: var(--brand-typo_font-family--secondary_regular); 
-    font-weight: var(--brand-typo_font-weight--regular);
-} 
-
-.marketing-typo_text-inter-3-regular { 
-    font-size: var(--brand-typo_text-3-font-size); 
-    line-height: var(--brand-typo_text-3-line-height);
-} 
-
-.dist_marketing-media__button__XrwMT { 
+} .dist_marketing-media__button__XrwMT { 
     display: flex; 
     flex-direction: column; 
     gap: var(--brand-spacing_2,.5rem); 

@@ -1,0 +1,50 @@
+/* Hide sidebar on small screens */
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar.open {
+    display: block;
+    transform: translateX(0);
+  }
+  
+  /* Overlay for small screen */
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  /* Show sidebar on larger screens */
+  @media (min-width: 992px) {
+    .sidebar {
+      display: block;
+      position: static;
+      width: auto;
+      transform: translateX(0);
+    }
+  
+    .sidebar-overlay {
+      display: none;
+    }
+  
+    .toggle-sidebar-btn {
+      display: none;
+    }
+  }
+  

@@ -1,4 +1,3 @@
-/////////////// filter
 
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,6 +6,7 @@ import ProductCard from './ProductCard';
 import { fetchProducts } from '../../redux/productSlice'; // Adjust path as necessary
 import { fetchCategories } from '../../redux/categorySlice'; // Adjust path as necessary
 import './Product.css';
+import ImageUrl from '../../../ImageUrl';
 
 const ProductCards = () => {
   const dispatch = useDispatch();
@@ -75,8 +75,8 @@ const ProductCards = () => {
                   },
                   rating: 5, // Set this if you have rating data
                   discount: '', // Set this if you have discount data
-                  imageUrl: `http://localhost:3000/${product.thumbnail}`, // Adjust path if necessary
-                  link: `http://localhost:3000/products/${product._id}`, // Adjust path if necessary
+                  imageUrl: `${ImageUrl}/${product.thumbnail}`, // Adjust path if necessary
+                  link: `${ImageUrl}/products/${product._id}`, // Adjust path if necessary
                 }}
               />
             ))}
