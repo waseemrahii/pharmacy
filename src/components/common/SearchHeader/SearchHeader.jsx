@@ -7,7 +7,7 @@ const SearchPageHeader = () => {
       <div className="search-page-header">
         <div>
           <h5 className="font-semibold mb-1">Products</h5>
-       
+
         </div>
         <form
           id="search-form"

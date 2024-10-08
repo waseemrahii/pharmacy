@@ -25,7 +25,7 @@ const LeadershipTeam = () => {
         >
           Solutions for a Healthy Life.
         </h2>
-        <span className="marketing-typo_text-inter-3-regular text-black " style={{lineHeight:"1.7rem"}}>
+        <span className="marketing-typo_text-inter-3-regular " style={{lineHeight:"1.7rem"}}>
         Our team comprises, physicians, pharmacists, clinical scientists and healthcare professionals to provide up to date, information
          for the benefit of people seeking good health and improved lifestyles.
         </span>
