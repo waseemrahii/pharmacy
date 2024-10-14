@@ -1,3 +1,3 @@
-const BaseUrl = 'http://82.112.242.68:3000/api';
+const BaseUrl = 'https://pharmacy-server-1.onrender.com/api';
 
 export default BaseUrl;
