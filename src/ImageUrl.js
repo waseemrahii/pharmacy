@@ -1,3 +1,3 @@
-const ImageUrl = 'http://82.112.242.68:3000';
+const ImageUrl = 'https://pharmacy-server-1.onrender.com';
 
 export default ImageUrl;
