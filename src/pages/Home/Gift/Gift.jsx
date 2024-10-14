@@ -101,7 +101,7 @@ const CardRow = () => {
 
         {/* Card Row */}
         <div className="flex flex-wrap justify-center gap-4">
-          {limitedCategoryData.map((category) => (
+          {categories?.map((category) => (
             <Link 
               key={category._id} 
               to={`/products?category=${category._id}`} // Link to the VendorProduct with category ID
